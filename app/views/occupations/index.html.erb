@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Occupations</h1>
+<h1>Address Book</h1>
+<h2>Occupations</h2>
 
 <table>
   <thead>
@@ -14,11 +15,11 @@
   <tbody>
     <% @occupations.each do |occupation| %>
       <tr>
-        <td><%= occupation.title %></td>
-        <td><%= occupation.salary %></td>
-        <td><%= link_to 'Show', occupation %></td>
-        <td><%= link_to 'Edit', edit_occupation_path(occupation) %></td>
-        <td><%= link_to 'Destroy', occupation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="addressRow"><%= occupation.title %></td>
+        <td class="addressRow">$<%= occupation.salary %></td>
+        <td class="btnSide"><%= link_to 'Show', occupation %></td>
+        <td class="btnSide"><%= link_to 'Edit', edit_occupation_path(occupation) %></td>
+        <td class="btnSide"><%= link_to 'Destroy', occupation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
